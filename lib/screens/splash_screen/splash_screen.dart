@@ -2,7 +2,7 @@ import 'dart:async';
 
 import 'package:craftmyplate/constants/colors.dart';
 import 'package:craftmyplate/constants/images.dart';
-import 'package:craftmyplate/on_boarrding_screen/on_boarding_screen.dart';
+import 'package:craftmyplate/screens/on_boarrding_screen/on_boarding_screen.dart';
 import 'package:flutter/material.dart';
 
 class SplashScreen extends StatefulWidget {
