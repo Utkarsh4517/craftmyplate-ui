@@ -4,3 +4,4 @@ const purpleColor = Color(0xff6318AF);
 const creammColor = Color(0xffF7E5B7);
 const whiteColor = Colors.white;
 const blackColor = Colors.black;
+const purpleBg = Color(0xffE8E0EA);
