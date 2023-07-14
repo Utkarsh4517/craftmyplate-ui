@@ -4,6 +4,7 @@ import 'package:craftmyplate/screens/homepage/homepage.dart';
 import 'package:craftmyplate/screens/on_boarrding_screen/intro_page1.dart';
 import 'package:craftmyplate/screens/on_boarrding_screen/intro_page2.dart';
 import 'package:craftmyplate/screens/on_boarrding_screen/intro_page3.dart';
+import 'package:feather_icons/feather_icons.dart';
 import 'package:flutter/material.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 import 'package:smooth_page_indicator/smooth_page_indicator.dart';
@@ -79,7 +80,67 @@ class _OnBoardingScreenState extends State<OnBoardingScreen> {
                   ),
                 ),
               ],
-            )
+            ),
+            // next page button
+
+            AnimatedContainer(
+              duration: const Duration(milliseconds: 500),
+              alignment: const AlignmentDirectional(0, 0.87),
+              child: Stack(
+                children: [
+                  GestureDetector(
+                    onTap: () {
+                      _controller.nextPage(
+                          duration: const Duration(milliseconds: 500),
+                          curve: Curves.easeIn);
+                      if (onLastPage) _completeOnboarding();
+                    },
+                    child: AnimatedContainer(
+                      duration: const Duration(milliseconds: 250),
+                      width: onLastPage
+                          ? getScreenWidth(context) * 0.45
+                          : getScreenWidth(context) * 0.15,
+                      height: onLastPage
+                          ? getScreenWidth(context) * 0.15
+                          : getScreenWidth(context) * 0.15,
+                      // padding: EdgeInsets.all(getScreenWidth(context) * 0.025),
+                      decoration: BoxDecoration(
+                          color: purpleBg,
+                          borderRadius: BorderRadius.circular(
+                              getScreenWidth(context) * 0.1)),
+                      child: Row(
+                        mainAxisAlignment: onLastPage
+                            ? MainAxisAlignment.spaceEvenly
+                            : MainAxisAlignment.center,
+                        children: [
+                          if (onLastPage)
+                            const Text(
+                              'Get Started',
+                              style: TextStyle(
+                                color: purpleColor,
+                                fontFamily: 'Lexend',
+                                fontWeight: FontWeight.w400,
+                              ),
+                            ),
+                          Container(
+                            padding:
+                                EdgeInsets.all(getScreenWidth(context) * 0.02),
+                            decoration: const BoxDecoration(
+                              color: purpleColor,
+                              shape: BoxShape.circle,
+                            ),
+                            child: const Icon(
+                              FeatherIcons.arrowRight,
+                              color: whiteColor,
+                            ),
+                          )
+                        ],
+                      ),
+                    ),
+                  )
+                ],
+              ),
+            ),
           ],
         ),
       ),
