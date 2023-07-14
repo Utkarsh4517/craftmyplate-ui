@@ -1,5 +1,6 @@
 import 'package:craftmyplate/constants/colors.dart';
 import 'package:craftmyplate/constants/constraints.dart';
+import 'package:craftmyplate/screens/auth_screen/login_or_signup.dart';
 import 'package:craftmyplate/screens/homepage/homepage.dart';
 import 'package:craftmyplate/screens/on_boarrding_screen/intro_page1.dart';
 import 'package:craftmyplate/screens/on_boarrding_screen/intro_page2.dart';
@@ -28,7 +29,7 @@ class _OnBoardingScreenState extends State<OnBoardingScreen> {
     Navigator.pushReplacement(
         context,
         MaterialPageRoute(
-            builder: (context) => const HomePage())); // PageViewHome()
+            builder: (context) => const LoginOrSignupPage())); // PageViewHome()
   }
 
   @override
