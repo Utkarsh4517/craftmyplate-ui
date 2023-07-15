@@ -19,6 +19,8 @@ class _SplashScreenState extends State<SplashScreen> {
     super.initState();
   }
 
+  // ek initial default native still splash screen hoga usske baad current animated splash screen chhalega 
+
   void startTimer() {
     const duration = Duration(milliseconds: 1000);
 

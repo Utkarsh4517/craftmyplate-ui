@@ -7,3 +7,5 @@ const page3svg = "assets/svgs/intro_page3.svg";
 const loginPageSvg = "assets/svgs/login_page.svg";
 
 const offer1png = "assets/pngs/offer1.png";
+const defaultPlatter = 'assets/pngs/default_platter.png';
+const craftYourOwn = 'assets/pngs/craft_your_own.png';
