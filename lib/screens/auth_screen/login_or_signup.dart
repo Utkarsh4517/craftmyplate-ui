@@ -1,10 +1,9 @@
-import 'dart:math';
-
 import 'package:craftmyplate/constants/colors.dart';
 import 'package:craftmyplate/constants/constraints.dart';
 import 'package:craftmyplate/constants/images.dart';
 import 'package:craftmyplate/screens/auth_screen/auth_button.dart';
 import 'package:craftmyplate/widgets/text_form.dart';
+import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 
@@ -17,6 +16,8 @@ class LoginOrSignupPage extends StatefulWidget {
 
 class _LoginOrSignupPageState extends State<LoginOrSignupPage> {
   final phoneController = TextEditingController();
+
+  var verificationId = '';
 
   @override
   Widget build(BuildContext context) {
@@ -85,6 +86,19 @@ class _LoginOrSignupPageState extends State<LoginOrSignupPage> {
           )
         ],
       ),
+    );
+  }
+
+  Future<void> phoneAuthentication(String phoneNumber) async {
+    final auth = FirebaseAuth.instance;
+    await auth.verifyPhoneNumber(
+      phoneNumber: phoneNumber,
+      verificationCompleted: (credential) async {
+        await auth.signInWithCredential(credential);
+      },
+      verificationFailed: (e) {},
+      codeSent: (verificationId, resendToken) {},
+      codeAutoRetrievalTimeout: (verificationId) {},
     );
   }
 }

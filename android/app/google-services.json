@@ -14,6 +14,14 @@
       },
       "oauth_client": [
         {
+          "client_id": "1062926937674-7qc7c2v0udejp9s4bno71k5q7lph1h2j.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.craftmyplate",
+            "certificate_hash": "41dd3638fb552c37a6fd4eded7e3d6161e1507ee"
+          }
+        },
+        {
           "client_id": "1062926937674-29i8ol9tiiimnrqhqe19dgn055a4475f.apps.googleusercontent.com",
           "client_type": 3
         }
@@ -29,6 +37,13 @@
             {
               "client_id": "1062926937674-29i8ol9tiiimnrqhqe19dgn055a4475f.apps.googleusercontent.com",
               "client_type": 3
+            },
+            {
+              "client_id": "1062926937674-v8a7de88722lp0nf58pl9nrbmcosf2bl.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.example.craftmyplate"
+              }
             }
           ]
         }

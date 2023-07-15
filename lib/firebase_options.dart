@@ -66,6 +66,7 @@ class DefaultFirebaseOptions {
     messagingSenderId: '1062926937674',
     projectId: 'craftmyplate-8f3a1',
     storageBucket: 'craftmyplate-8f3a1.appspot.com',
+    androidClientId: '1062926937674-7qc7c2v0udejp9s4bno71k5q7lph1h2j.apps.googleusercontent.com',
     iosClientId: '1062926937674-v8a7de88722lp0nf58pl9nrbmcosf2bl.apps.googleusercontent.com',
     iosBundleId: 'com.example.craftmyplate',
   );
@@ -76,6 +77,7 @@ class DefaultFirebaseOptions {
     messagingSenderId: '1062926937674',
     projectId: 'craftmyplate-8f3a1',
     storageBucket: 'craftmyplate-8f3a1.appspot.com',
+    androidClientId: '1062926937674-7qc7c2v0udejp9s4bno71k5q7lph1h2j.apps.googleusercontent.com',
     iosClientId: '1062926937674-v9u1s45fu165gbotd6br4f1b8af5h6fm.apps.googleusercontent.com',
     iosBundleId: 'com.example.craftmyplate.RunnerTests',
   );
