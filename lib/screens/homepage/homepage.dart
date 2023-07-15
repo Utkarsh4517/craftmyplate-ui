@@ -1,5 +1,7 @@
 import 'package:craftmyplate/constants/colors.dart';
 import 'package:craftmyplate/constants/constraints.dart';
+import 'package:craftmyplate/constants/images.dart';
+import 'package:craftmyplate/screens/homepage/offer_list_tile.dart';
 import 'package:feather_icons/feather_icons.dart';
 import 'package:flutter/material.dart';
 
@@ -11,6 +13,11 @@ class HomePage extends StatefulWidget {
 }
 
 class _HomePageState extends State<HomePage> {
+  final offerlistTileText = [
+    'Enjoy your first order, the taste of our delicious food!',
+    'Delicious food\nfor happy life'
+  ];
+  final offerListtilePictures = [offer1png, offer1png];
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -99,6 +106,23 @@ class _HomePageState extends State<HomePage> {
                       )
                     ],
                   )
+                ],
+              ),
+            ),
+
+            // first horizontal listview
+            SizedBox(
+              height: getScreenWidth(context) * 0.4,
+              child: ListView(
+                scrollDirection: Axis.horizontal,
+                children: const [
+                  OfferListTile(
+                      picture: offer1png,
+                      text:
+                          'Enjoy your first order, the taste of our delicious food!'),
+                  OfferListTile(
+                      picture: offer1png,
+                      text: 'Delicious food\nfor happy life')
                 ],
               ),
             )

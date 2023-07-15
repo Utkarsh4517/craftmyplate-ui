@@ -5,3 +5,5 @@ const page1svg = "assets/svgs/intro_page1.svg";
 const page2svg = "assets/svgs/intro_page2.svg";
 const page3svg = "assets/svgs/intro_page3.svg";
 const loginPageSvg = "assets/svgs/login_page.svg";
+
+const offer1png = "assets/pngs/offer1.png";
