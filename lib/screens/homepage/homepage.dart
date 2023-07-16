@@ -1,6 +1,7 @@
 import 'package:craftmyplate/constants/colors.dart';
 import 'package:craftmyplate/constants/constraints.dart';
 import 'package:craftmyplate/constants/images.dart';
+import 'package:craftmyplate/screens/homepage/categories.dart';
 import 'package:craftmyplate/screens/homepage/default_menu.dart';
 import 'package:craftmyplate/screens/homepage/offer_list_tile.dart';
 import 'package:craftmyplate/screens/homepage/platters.dart';
@@ -192,9 +193,10 @@ class _HomePageState extends State<HomePage> {
             ),
             SizedBox(height: getScreenWidth(context) * 0.1),
 
+            // default menu container 
             Container(
               margin: EdgeInsets.only(left: getScreenWidth(context) * 0.04),
-              height: getScreenWidth(context) * 0.5,
+              height: getScreenWidth(context) * 0.42,
               child: ListView(
                 scrollDirection: Axis.horizontal,
                 children: const [
@@ -206,6 +208,29 @@ class _HomePageState extends State<HomePage> {
                 ],
               ),
             ),
+
+            // top categories
+            Container(
+              margin: EdgeInsets.symmetric(horizontal: getScreenWidth(context) * 0.06),
+              child: Text('Top Categories', style: TextStyle(fontFamily: 'Lexend', fontWeight: FontWeight.w400, fontSize: getScreenWidth(context) * 0.05),
+            )),
+
+            // category list view
+            Container(
+              margin: EdgeInsets.symmetric(horizontal: getScreenWidth(context) * 0.06),
+              height: getScreenWidth(context) * 0.3,
+              child: ListView(
+                scrollDirection: Axis.horizontal,
+                children: const [
+                  CategoriesContainer(img: 'assets/pngs/image1.png', text: 'Starters'),
+                  CategoriesContainer(img: 'assets/pngs/image1.png', text: 'Drinks'),
+                  CategoriesContainer(img: 'assets/pngs/image1.png', text: 'Rice'),
+                  CategoriesContainer(img: 'assets/pngs/image1.png', text: 'Curry'),
+                  CategoriesContainer(img: 'assets/pngs/image1.png', text: 'Desserts'),
+                  CategoriesContainer(img: 'assets/pngs/image1.png', text: 'Starters'),
+                ],
+              ),
+            )
           ],
         ),
       ),
