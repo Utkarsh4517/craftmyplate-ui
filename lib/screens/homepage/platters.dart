@@ -5,17 +5,24 @@ import 'package:flutter/material.dart';
 class Platter extends StatelessWidget {
   final String text;
   final String img;
+  final double width;
+  final double height;
+  final double fontSize;
   const Platter({
     required this.text,
     required this.img,
+    required this.height,
+    required this.width,
+    required this.fontSize,
     super.key,
   });
 
   @override
   Widget build(BuildContext context) {
-    return SizedBox(
-      width: getScreenWidth(context) * 0.42,
-      height: getScreenWidth(context) * 0.33,
+    return Container(
+      margin: EdgeInsets.symmetric(horizontal: getScreenWidth(context) * 0.01),
+      width: getScreenWidth(context) * width,
+      height: getScreenWidth(context) * height,
       child: Card(
         color: Colors.white,
         surfaceTintColor: whiteColor,
@@ -34,7 +41,7 @@ class Platter extends StatelessWidget {
                   color: blackColor,
                   fontFamily: 'Lexend',
                   fontWeight: FontWeight.w400,
-                  fontSize: getScreenWidth(context) * 0.04),
+                  fontSize: getScreenWidth(context) * fontSize),
             )
           ],
         ),
