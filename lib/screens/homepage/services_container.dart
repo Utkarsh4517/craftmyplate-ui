@@ -43,12 +43,12 @@ class ServiceContainer extends StatelessWidget {
                   children: [
                     ClipRRect(
                       borderRadius: BorderRadius.circular(4),
-                      child: Image.asset('assets/pngs/service1.png'),
+                      child: Image.asset(img),
                     ),
                     SizedBox(height: getScreenWidth(context) * 0.02),
                     Row(
                       children: [
-                        Image.asset('assets/pngs/signature_badge_2.png'),
+                        Image.asset(icon),
                         Text(
                           ' Signature',
                           style: TextStyle(
@@ -66,7 +66,7 @@ class ServiceContainer extends StatelessWidget {
                           children: [
                             SvgPicture.asset('assets/svgs/sparkle.svg'),
                             Flexible(
-                              child: Text(' High Quality Disposable Cutlery',
+                              child: Text(' $text1',
                                   style: TextStyle(
                                       overflow: TextOverflow.ellipsis,
                                       color: blackColor,
@@ -82,7 +82,7 @@ class ServiceContainer extends StatelessWidget {
                             SvgPicture.asset('assets/svgs/sparkle.svg'),
                             Flexible(
                               child: Text(
-                                  ' Elegant Decorations & Table Settings',
+                                  ' $text2',
                                   style: TextStyle(
                                       overflow: TextOverflow.ellipsis,
                                       color: blackColor,
@@ -97,7 +97,7 @@ class ServiceContainer extends StatelessWidget {
                           children: [
                             SvgPicture.asset('assets/svgs/sparkle.svg'),
                             Flexible(
-                              child: Text(' Served by Waitstaff',
+                              child: Text(' $text3',
                                   style: TextStyle(
                                       overflow: TextOverflow.ellipsis,
                                       color: blackColor,
@@ -113,7 +113,7 @@ class ServiceContainer extends StatelessWidget {
                             SvgPicture.asset('assets/svgs/sparkle.svg'),
                             Flexible(
                               child: Text(
-                                  ' Best for Weddings, Corporate Events etc',
+                                  ' $text4',
                                   style: TextStyle(
                                       overflow: TextOverflow.ellipsis,
                                       color: blackColor,

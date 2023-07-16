@@ -3,6 +3,8 @@ import 'package:craftmyplate/constants/constraints.dart';
 import 'package:craftmyplate/constants/images.dart';
 import 'package:craftmyplate/screens/homepage/categories.dart';
 import 'package:craftmyplate/screens/homepage/default_menu.dart';
+import 'package:craftmyplate/screens/homepage/how_does_it_work_left.dart';
+import 'package:craftmyplate/screens/homepage/how_does_it_work_right.dart';
 import 'package:craftmyplate/screens/homepage/offer_list_tile.dart';
 import 'package:craftmyplate/screens/homepage/platters.dart';
 import 'package:craftmyplate/screens/homepage/services_container.dart';
@@ -406,7 +408,9 @@ class _HomePageState extends State<HomePage> {
             ),
 
             Container(
-              margin: EdgeInsets.symmetric(horizontal: getScreenWidth(context) * 0.06, vertical: getScreenWidth(context) * 0.05),
+              margin: EdgeInsets.symmetric(
+                  horizontal: getScreenWidth(context) * 0.06,
+                  vertical: getScreenWidth(context) * 0.05),
               child: Text(
                 'Services',
                 style: TextStyle(
@@ -416,7 +420,91 @@ class _HomePageState extends State<HomePage> {
                     fontSize: getScreenWidth(context) * 0.05),
               ),
             ),
-            ServiceContainer(icon: 'icon', img: 'img', isRecommended: true, text1: 'text1', text2: '', text3: 'text3', text4: 'text4')
+            SizedBox(
+              height: getScreenWidth(context) * 0.8,
+              child: ListView(
+                scrollDirection: Axis.horizontal,
+                children: const [
+                  ServiceContainer(
+                      icon: 'assets/pngs/signature_badge_2.png',
+                      img: 'assets/pngs/service1.png',
+                      isRecommended: true,
+                      text1: 'High Quality Disposable Cutlery',
+                      text2: 'Elegant Decorations & Table Settings',
+                      text3: 'Served by Waitstaff',
+                      text4: 'Best for Weddings, Corporate Events etc'),
+                  ServiceContainer(
+                      icon: 'assets/pngs/signature_badge_2.png',
+                      img: 'assets/pngs/service1.png',
+                      isRecommended: false,
+                      text1: 'High Quality Disposable Cutlery',
+                      text2: 'Elegant Decorations & Table Settings',
+                      text3: 'Served by Waitstaff',
+                      text4: 'Best for Weddings, Corporate Events etc'),
+                  ServiceContainer(
+                      icon: 'assets/pngs/signature_badge_2.png',
+                      img: 'assets/pngs/service1.png',
+                      isRecommended: false,
+                      text1: 'High Quality Disposable Cutlery',
+                      text2: 'Elegant Decorations & Table Settings',
+                      text3: 'Served by Waitstaff',
+                      text4: 'Best for Weddings, Corporate Events etc')
+                ],
+              ),
+            ),
+            Container(
+              margin: EdgeInsets.symmetric(
+                  horizontal: getScreenWidth(context) * 0.06,
+                  vertical: getScreenWidth(context) * 0.05),
+              child: Text(
+                'How does it work ?',
+                style: TextStyle(
+                    color: blackColor,
+                    fontFamily: 'Lexend',
+                    fontWeight: FontWeight.w400,
+                    fontSize: getScreenWidth(context) * 0.05),
+              ),
+            ),
+            const HowDoesItWorkLeft(
+                img: 'assets/pngs/how1.png',
+                headText: 'Customize Menu',
+                bodyText: 'Select items for a single event or multiple events'),
+            const HowDoesItWorkRight(
+                img: 'assets/pngs/how1.png',
+                headText: 'Choose Services',
+                bodyText:
+                    'Select the type of services from varying cutlery, mode of serving options, & more'),
+            const HowDoesItWorkLeft(
+                img: 'assets/pngs/how3.png',
+                headText: 'Dynamic Pricing',
+                bodyText:
+                    'Price per plate varies with no. of items in a plate and no. of plates selected'),
+
+            const HowDoesItWorkRight(
+                img: 'assets/pngs/how4.png',
+                headText: 'Track Your Order',
+                bodyText:
+                    'Track the order status and seek help from the executives anytime'),
+
+            const HowDoesItWorkLeft(
+                img: 'assets/pngs/how5.png',
+                headText: 'Taste Your Samples',
+                bodyText:
+                    'Explode your taste bud with samples of what you order(on request for eligible orders)'),
+
+            const HowDoesItWorkRight(
+                img: 'assets/pngs/how4.png',
+                headText: 'Enjoy Food and Services',
+                bodyText:
+                    'Enjoy event with delicious and customized food'),
+
+            SizedBox(height: getScreenWidth(context) * 0.05),
+            Container(
+              margin: EdgeInsets.symmetric(horizontal: getScreenWidth(context) * 0.07),
+              width: getScreenWidth(context) * 0.7,
+              child: Text('Delicious food with professional service !', style: TextStyle(fontFamily: 'Lexend', fontWeight: FontWeight.w400, fontSize: getScreenWidth(context) * 0.06),),
+            ),
+            SizedBox(height: getScreenWidth(context) * 0.2),
           ],
         ),
       ),
