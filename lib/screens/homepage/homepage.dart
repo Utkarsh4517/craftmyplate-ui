@@ -180,7 +180,8 @@ class _HomePageState extends State<HomePage> {
             ),
 
             Container(
-              margin: EdgeInsets.symmetric(horizontal: getScreenWidth(context) * 0.05),
+              margin: EdgeInsets.symmetric(
+                  horizontal: getScreenWidth(context) * 0.05),
               child: const Row(
                 mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                 children: [
@@ -191,7 +192,20 @@ class _HomePageState extends State<HomePage> {
             ),
             SizedBox(height: getScreenWidth(context) * 0.1),
 
-            DefaultMenu(text: 'Default Menu 1')
+            Container(
+              margin: EdgeInsets.only(left: getScreenWidth(context) * 0.04),
+              height: getScreenWidth(context) * 0.5,
+              child: ListView(
+                scrollDirection: Axis.horizontal,
+                children: const [
+                  DefaultMenu(text: 'Default Menu 1'),
+                  DefaultMenu(text: 'Default Menu 2'),
+                  DefaultMenu(text: 'Default Menu 2'),
+                  DefaultMenu(text: 'Default Menu 2'),
+                  DefaultMenu(text: 'Default Menu 1'),
+                ],
+              ),
+            ),
           ],
         ),
       ),

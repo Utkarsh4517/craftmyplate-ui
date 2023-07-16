@@ -1,7 +1,6 @@
 import 'package:craftmyplate/constants/colors.dart';
 import 'package:craftmyplate/constants/constraints.dart';
 import 'package:craftmyplate/constants/images.dart';
-import 'package:feather_icons/feather_icons.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 
@@ -15,9 +14,10 @@ class DefaultMenu extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      margin: EdgeInsets.symmetric(horizontal: getScreenWidth(context) * 0.04),
+      // margin: EdgeInsets.only(left: getScreenWidth(context) * 0.04),
       width: getScreenWidth(context) * 0.5,
       height: getScreenWidth(context) * 0.5,
+      
       child: Stack(
         children: [
           Positioned(
