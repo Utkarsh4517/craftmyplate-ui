@@ -34,7 +34,7 @@ class Platter extends StatelessWidget {
                   color: blackColor,
                   fontFamily: 'Lexend',
                   fontWeight: FontWeight.w400,
-                  fontSize: getScreenWidth(context) * 0.045),
+                  fontSize: getScreenWidth(context) * 0.04),
             )
           ],
         ),

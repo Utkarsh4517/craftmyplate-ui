@@ -1,6 +1,7 @@
 import 'package:craftmyplate/constants/colors.dart';
 import 'package:craftmyplate/constants/constraints.dart';
 import 'package:craftmyplate/constants/images.dart';
+import 'package:craftmyplate/screens/homepage/default_menu.dart';
 import 'package:craftmyplate/screens/homepage/offer_list_tile.dart';
 import 'package:craftmyplate/screens/homepage/platters.dart';
 import 'package:feather_icons/feather_icons.dart';
@@ -187,7 +188,10 @@ class _HomePageState extends State<HomePage> {
                   Platter(text: 'Craft your own', img: craftYourOwn)
                 ],
               ),
-            )
+            ),
+            SizedBox(height: getScreenWidth(context) * 0.1),
+
+            DefaultMenu(text: 'Default Menu 1')
           ],
         ),
       ),
